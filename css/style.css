@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0
+}
+
+*,:after,:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 16px;
+}
+html, body {
+    overflow-x: hidden;
+}
+body {
+    background-color: #fff;
+    color: #747474;
+    font-family: "Be Vietnam Pro", serif;
+    margin: 0 auto !important;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    max-width: 100%;
+}
+a, a img, img {
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+}
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+}
+ul  {
+    list-style: none;
+    padding-left: 0
+}
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.col-2 {
+    width: 20%;box-sizing: border-box;
+}
+.col-6 {
+    width: 60%;box-sizing: border-box;
+}
+.col-5 {
+    width: 50%;box-sizing: border-box;
+}
+.col-3 {
+    width: 30%;box-sizing: border-box;
+}
+.col-4 {
+    width: 40%;box-sizing: border-box;
+}
+.col-45 {
+    width: 45%;box-sizing: border-box;
+}
+.col-35 {
+    width: 35%;box-sizing: border-box;
+}
+.col-7 {
+    width: 70%;box-sizing: border-box;
+}
+.col-half {
+    width: 50%;box-sizing: border-box;
+}
+.col-third {
+    width: calc(100% / 3);box-sizing: border-box;
+}
+.col-forth {
+    width: calc(100% / 4);box-sizing: border-box;
+}
+.align-center {
+    align-items: center;
+}
+h6.small {
+    font-size: 0.875rem;
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Archivo';
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+h6.small:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 19px;
+    height: 4px;
+    background: #2C1F89;
+}
+h2 {
+    color: #1D2D3A;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+p {
+    color: #1D2D3A;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "Be Vietnam Pro", serif;
+    margin-bottom: 1.2rem;
+}
+.lightblue {
+    background-color: #E7EEFB;
+}
+/* Header Css */
+.siteheader {
+    padding: 1rem 0;
+}
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.navbar-nav li a {
+    color: #0F3254;font-size: 1rem;font-weight: 400;text-decoration: none;padding: 0 1.25rem;display: inline-block;
+}
+.bannerimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainbannersection {
+    position: relative;z-index: 1;height: 42.25rem;
+}
+.mainbannersection .container, .mainbannersection .row {
+    height: 100%;
+    align-items: center;
+}
+.bannerslider p {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.25rem;
+    margin-top: 12px; line-height: 1.4;
+}
+.bannerslider h1 {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+}
+.mainbannersection .row {
+    justify-content: space-between;
+}
+.admissionwrap .formwrap {
+    background: rgba(255,255,255, 0.73);
+    padding: 2rem;
+    border-radius: 8px;
+}
+.admissionwrap .formwrap h4 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+.admissionwrap .formwrap .formfields form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.admissionwrap .formwrap .formfields form .form-group {
+    width: 49%;
+}
+.admissionwrap .formwrap .formfields form .form-group label {
+    width: 100%;
+    font-size: 0.8rem;
+    color: #0F3254;
+    margin-bottom: 0.625rem;
+    display: block !important;
+    font-family: "Be Vietnam Pro", serif;
+}
+.admissionwrap .formwrap .formfields form .form-group input, .admissionwrap .formwrap .formfields form .form-group select {
+    background: #FFFFFF;
+    color: #10375C;
+    border-radius: 5px;
+    height: 50px;
+    padding: 0 1.25rem !important;
+    font-family: "Be Vietnam Pro", serif;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.theme-btn, .nav-link.btn {
+    background-color: #2C1F89;
+    font-size: 0.875rem;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+ul.navbar-nav {
+    align-items: center;
+}
+.nav-link.btn  {
+    border-radius: 8px;
+}
+ul.navbar-nav .nav-item:last-child {
+    margin-left: 20%;
+}
+.pdequalsec {
+    padding: 5rem 0;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.textCenter {
+    text-align: center;
+}
+.headingBox.mx-60 h6.small {
+    display: inline-block;
+}
+.headingBox.mx-60 {
+    width: 60rem; margin: 0 auto 3.5rem;
+}
+.featureslider {
+    display: flex;
+    flex-wrap: wrap; width: 70rem; margin: 0 auto;
+}
+.featureslider .featureslide {
+    width: calc(100% / 3);
+}
+.featureslide .enrollsearchcol {
+    text-align: center; padding: 0 2rem;
+}
+.featureslide .enrollsearchcol h2 {
+    margin: 1.25rem 0 0.65rem;
+    font-size: 1.5rem;
+    color: #222220;
+    line-height: 1.4; 
+    font-weight: 600;
+}
+.siteheader .row {
+    align-items: center;
+}
+.sucessstoriesection  {
+    background-position: bottom center;background-repeat: no-repeat;
+}
+.sucessstorieslide {
+    width: 420px !important;
+    padding: 0 1rem;
+}
+.sucessstorieslideinnr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sucessstorieslideinnr .image {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.sucessstorieslideinnr .content h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    list-style: 1.2;
+    color: #2C1F89;font-weight: 600;margin-bottom: 0.625rem;
+}
+.sucessstorieslideinnr .content h2 {
+    font-size: 1.5rem;
+    list-style: 1.2;
+    color: #1D2D3A;font-weight: 400;
+}
+.trustedbusiness .headingBox h2 {
+    color: #0F3254;font-weight: 600;
+}
+.sucessstorieslider {
+    margin-right: -70px;
+}
+.max-65 {
+    max-width: 65rem;
+}
+.m-auto {
+    margin: 0 auto;
+}
+.sucessstoriesection .headingBox {
+    margin-bottom: 3.313rem;
+}
+.sucessstorieslider button.slick-arrow:before {
+    display: none !important;
+    content: "" !important;
+}
+.sucessstorieslider button.slick-arrow {
+    background-image: url('../img/lefticon.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    top: -100px;
+}
+.sucessstorieslider button.slick-next {
+    right: 60px;
+    transform: rotate(180deg);
+}
+.sucessstorieslider button.slick-prev {
+    left: auto;
+    right: 110px;
+    transform: none !important;
+}
+.testimonialslide {
+    padding: 1rem;
+}
+.testimonialslide .testimonialslideinnnr {
+    background-color: #2C1F89;
+    background-image: url('../img/comma.png');
+    background-position: bottom right;
+    border-radius: 8px;
+    padding: 2.25rem 3.125rem;
+    background-repeat: no-repeat;
+}
+.testimonialslide .testimonialslideinnnr * {color: #fff;}
+.testimonialslide .photoinfo {
+    display: flex;
+    align-items: center;
+}
+.testimonialslide .photoinfo img {
+    margin-right: 1.2rem;
+}
+.testimonialslide .photoinfo h6 {
+    font-size: 0.875rem;
+    color: #FFE9E9 !important;
+    font-weight: 400 !important;    
+}
+.testimonialslide .photoinfo h6 strong {
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.testimonialslide p {
+    line-height: 1.5;
+}
+.testimonialslider button.slick-arrow:before {
+    display: none !important;
+    content: "" !important;
+}
+.testimonialslider button.slick-arrow {
+    background-image: url('../img/lefticon.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    bottom: 0px;
+    top: auto;
+    margin: 0 auto;
+}
+.testimonialslider  {
+    position: relative;padding-bottom: 4rem;
+}
+.testimonialslider button.slick-next {
+    right: -50px;
+    left: 0;
+    transform: rotate(180deg);
+}
+.testimonialslider button.slick-prev {
+    left: 0;
+    right: 50px;
+    transform: none !important;
+}
+.readytobring {
+    background-size: cover;
+}
+.readytobringBox {
+    background: #2C1F89;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+.readytobringcontent {
+    padding: 1.5rem 4.25rem;
+}
+.readytobringcontent h2 {
+    color: #fff;
+}
+.readytobringcontent .theme-btn{
+    color: #2C1F89;background: #fff;text-decoration: none;width: 13.75rem;border-radius: 1rem;
+}
+.readytobringimage {
+   border-radius: 2rem; overflow: hidden;height: 100%;
+}
+.readytobringimage img {
+    width: 100%;
+    height: 100%;    
+    display: block;
+    object-fit: cover;
+}
+.readytobringBox:before {
+    content: "";
+    background-image: url('../img/dots.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 5rem;
+}
+footer {
+    background: #2C1F89;
+}
+footer p {
+    color: #DDD7C8;
+    padding: 1rem 0;
+    margin-bottom: 0;text-align: center;font-weight: 600;
+}
