@@ -425,3 +425,6 @@ footer p {
     padding: 1rem 0;
     margin-bottom: 0;text-align: center;font-weight: 600;
 }
+.theme-btn:hover, .nav-link.btn:hover {
+    background-color: #333;
+}
