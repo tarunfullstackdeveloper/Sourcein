@@ -428,3 +428,6 @@ footer p {
 .theme-btn:hover, .nav-link.btn:hover {
     background-color: #333;
 }
+.readytobringcontent .theme-btn:hover {
+    background-color: #fff !important;
+}
