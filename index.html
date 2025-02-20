@@ -82,26 +82,26 @@
 								<h4>Get in Touch</h4>
 							</div>
 							<div class="formfields">
-								<form action="#" method="post">
+								<form action="" name="contact-form" method="post" class="contact__form">
 									<div class="form-group">
 										<label for="">Name *</label>
-									   <input type="text" name="name" class="form-control" placeholder="Name *">
+									   <input type="text" name="name" class="form-control" placeholder="Name *" required>
 									</div>
 									<div class="form-group">
 										<label for="">Company name*</label>
-									   <input type="text" name="company_name" class="form-control" placeholder="Company name*">
+									   <input type="text" name="company_name" class="form-control" placeholder="Company name*" required>
 									</div>
 									<div class="form-group">
 										<label for="">Work Email*</label>
-									   <input type="email" name="email" class="form-control" placeholder="Work Email*">
+									   <input type="email" name="email" class="form-control" placeholder="Work Email*" required>
 									</div>
 									<div class="form-group">
 										<label for="">Phone number*</label>
-									   <input type="text" name="phone_number" class="form-control" placeholder="Phone number*">
+									   <input type="text" name="phone_number" class="form-control" placeholder="Phone number*" required>
 									</div>
 									<div class="form-group">
 										<label for="">Region*</label>
-									   <select class="form-select" name="service">
+									   <select class="form-select" name="region">
 										  <option value="">Select Region</option>
 										  <option value="1">Region 1</option>
 										  <option value="2">Region 2</option>
@@ -110,14 +110,14 @@
 									</div>
 									<div class="form-group">
 										<label for="">Industry*</label>
-									   <select class="form-select" name="service">
+									   <select class="form-select" name="industry">
 										  <option value="">Select Industry</option>
 										  <option value="1">Industry 1</option>
 										  <option value="2">Industry 2</option>
 										  <option value="3">Industry 3</option>
 									   </select>
 									</div>
-									<button class="theme-btn">Let’s talk</button>
+									<button class="theme-btn" type="submit" id="submit">Let’s talk</button>
 								 </form>
 							</div>
 						</div>
@@ -133,7 +133,7 @@
 		<div class="container">
 			<div class="row justify-between align-center">
 				<div class="col-4">
-					<div class="image">
+					<div class="image hidemobile">
 						<img src="img/about.png" alt="About">
 					</div>
 				</div>
@@ -141,7 +141,10 @@
 					<div class="contentwrapper">
 						<h6 class="small">ABOUT US</h6>
 						<h2>Who we are?</span></h2>
-						<p>We are a team of experienced accounting and bookkeeping professionals dedicated to delivering accuracy, efficiency, and reliability. At SourceIn, we understand the critical role accounting operations play in business success, and we ensure seamless, compliant, and well-structured accounting processes for mid-market companies.</p>							
+						<p>We are a team of experienced accounting and bookkeeping professionals dedicated to delivering accuracy, efficiency, and reliability. At SourceIn, we understand the critical role accounting operations play in business success, and we ensure seamless, compliant, and well-structured accounting processes for mid-market companies.</p>	
+						<div class="image showmobile" style="display: none;">
+							<img src="img/about.png" alt="About">
+						</div>						
 						<p>With a strong foundation in industry best practices and a commitment to excellence, we provide businesses with the expertise they need to maintain clarity and operational stability. Our approach is built on trust, precision, and a deep understanding of the evolving needs of modern businesses.</p>
 					</div>
 				</div>
@@ -395,9 +398,14 @@
 				<h6 class="small">REACH OUT TO US</h6>
 				<h2>Our Offices</h2>
 			</div>
-			<div class="officelocation">
+			<div class="officelocation hidemobile">
 				<div class="image textCenter">
 					<img src="img/location.png" alt="Location">
+				</div>
+			</div>
+			<div class="officelocation showmobile" style="display: none;">
+				<div class="image textCenter">
+					<img src="img/mobilelocation.png" alt="Location">
 				</div>
 			</div>
 		</div>
@@ -419,3 +427,26 @@
 	<script src="js/script.js"></script>
 </body>
 </html>
+<script type="text/javascript">
+
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbwDnu9cTJD8hihiIth4bDBqdYZ9exsUiQo1gPh30iyRUPkLgODLoyAWCCj0JxbKE26byg/exec'
+
+	const form = document.forms['contact-form']
+
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+	  .then(response => {
+		// Check if the response is successful
+		if (response.ok) {
+		  // If successful, navigate to the thanks page
+		  window.location.href = 'thanks.html';
+		} else {
+		  // Handle other response scenarios if needed
+		  console.error('Error:', response.statusText);
+		}
+	  })
+	  // .then(() => { window.location.reload(); })
+	  .catch(error => console.error('Error!', error.message))
+	})
+</script>

@@ -238,11 +238,11 @@ ul.navbar-nav .nav-item:last-child {
     display: inline-block;
 }
 .headingBox.mx-60 {
-    width: 60rem; margin: 0 auto 3.5rem;
+    max-width: 60rem; margin: 0 auto 3.5rem;
 }
 .featureslider {
     display: flex;
-    flex-wrap: wrap; width: 70rem; margin: 0 auto;
+    flex-wrap: wrap; max-width: 70rem; margin: 0 auto;
 }
 .featureslider .featureslide {
     width: calc(100% / 3);
@@ -410,12 +410,18 @@ ul.navbar-nav .nav-item:last-child {
 }
 .readytobringBox:before {
     content: "";
-    background-image: url('../img/dots.png');
+    background-image: url(../img/dots.png);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 10rem;
+    top: -14px;
+    left: -20px;
+    width: 13rem;
     height: 5rem;
+}
+.theme-btn:hover, .nav-link.btn:hover {
+    background-color: #333;
+}
+.readytobringcontent .theme-btn:hover {
+    background-color: #DDD7C8 !important;
 }
 footer {
     background: #2C1F89;
@@ -425,9 +431,218 @@ footer p {
     padding: 1rem 0;
     margin-bottom: 0;text-align: center;font-weight: 600;
 }
-.theme-btn:hover, .nav-link.btn:hover {
-    background-color: #333;
+img {
+    max-width: 100%;
 }
-.readytobringcontent .theme-btn:hover {
-    background-color: #DDD7C8 !important;
+.trustedcol .image img {
+    filter: grayscale(1);
+}
+@media(max-width: 1380px) {
+    html {
+        font-size: 80%;
+    }
+}
+@media(max-width: 1025px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media(max-width: 800px) {
+    html {
+        font-size: 65%;
+    }
+    .menuwrapper {
+        display: none;
+    }
+    .humburgur {
+        display: inline-block !important;background-color: transparent;padding: 0px !important;float: right;
+    }
+    .siteheader .col-3 {
+        width: 70%;
+    }
+    
+    .siteheader .col-7 {
+        width: 30%;
+    }
+    
+    header.siteheader {
+        padding: 3rem 0;
+    }
+    header.siteheader {
+        padding: 1rem 0;
+    }
+    .menuwrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #2C1F89;
+        z-index: 99;
+    }
+    
+    .menuwrapper .menuwrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .menuwrapper .menuwrap ul {
+        display: block;
+        text-align: center;
+    }
+    
+    .menuwrapper .menuwrap ul li a {
+        padding: 1rem 0;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+    .menuwrapper svg.close {
+        float: right;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        position: absolute;display: inline-block !important;
+        top: 0;
+        right: 0;
+    }
+    .mainbannersection .col-35 {
+        width: 45%;
+    }
+    
+    .admissionwrap .formwrap .formfields form .form-group input, .admissionwrap .formwrap .formfields form .form-group select {
+        height: 40px;
+    }
+    
+    .theme-btn, .nav-link.btn {
+        font-size: 12px;
+    }
+    
+    h6.small:before {
+        height: 1.5px;
+        top: 3px;
+    }
+    
+    h6.small {
+        padding-left: 30px;
+    }
+    
+    .trustedcol .image {
+        width: 120px;
+    }
+    
+    .testimonialslider button.slick-arrow {
+        bottom: -14px;
+    }
+    button.humburgur svg {
+        width: 40px;
+    }
+    .logowrapper .logo img {
+        max-width: 130px;
+    }
+    .readytobringcontent .theme-btn svg {
+        width: 15px;
+    }
+    
+    .headingBox.max-65 {
+        max-width: 70%;
+    }
+}
+
+@media(max-width: 600px) {
+    .mainbannersection {
+        height: auto;padding: 46px 0;
+    }
+    .bannerslider p {
+        text-align: center;margin-bottom: 20px;
+    }
+    .bannerslider h1 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .col-5, .mainbannersection .col-35 {
+        width: 100%;
+    }
+    .hidemobile {
+        display: none;
+    }
+    p {
+        font-size: 14px !important; line-height: 1.6 !important;
+    }
+    .showmobile {
+        display: block !important;
+    }
+    .contentwrapper {
+        text-align: center;
+    }
+    h6.small {
+        display: inline-block;font-size: 10px; margin-bottom: 15px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .image.showmobile {
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    .featureslider .featureslide {
+        width: calc(100% / 1);
+    }
+    .headingBox.max-65 {
+        max-width: 100%;
+    }
+    .sucessstorieslider {
+        padding-top: 60px;
+    }
+    .sucessstorieslider button.slick-arrow {
+        top: -5px;
+        margin-right: 10px;
+    }
+    .sucessstoriesection .headingBox {
+        text-align: center;
+    }
+    .sucessstorieslide {
+        width: 300px !important;
+        padding: 0 8px;
+    }
+    .trustedbusiness .headingBox h2 {
+        font-size: 18px;
+    }
+    .trustedcol .image {
+        width: 170px;
+        padding: 20px 10px;
+    }
+    .trustedbusiness .align-center.justify-between.row {
+        justify-content: center;
+    }
+    .ourofficesec.pdequalsec {
+        padding-bottom: 0px;
+    }
+    .readytobringcontent.col-6, .readytobringimage.col-4 {
+        width: 100%;
+    }
+    
+    .readytobringBox {
+        flex-direction: column-reverse;
+        padding-bottom: 20px;
+    }    
+    .readytobringcontent {
+        padding: 30px 30px 20px;
+        text-align: center;
+    }    
+    .readytobringcontent .theme-btn {
+        margin: 20px auto 0;
+    }    
+    .readytobringBox:before {
+        width: 100%;
+        bottom: 0px;
+        top: auto;
+        background-repeat: repeat;
+        left: 0;
+        height: 70px;
+    }
+    .admissionwrap .formwrap .formfields form .form-group label {font-size: 12px;}
 }
