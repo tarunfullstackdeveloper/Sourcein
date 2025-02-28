@@ -436,9 +436,12 @@ footer p {
 img {
     max-width: 100%;
 }
-.trustedcol .image img {
-    filter: grayscale(1);
+.trustedcol {
+    width: 170px;
 }
+/* .trustedcol .image img {
+    filter: grayscale(1);
+} */
 @media(max-width: 1380px) {
     html {
         font-size: 80%;
@@ -551,6 +554,9 @@ img {
     .headingBox.max-65 {
         max-width: 70%;
     }
+    .trustedcol {
+        width: 120px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -647,4 +653,11 @@ img {
         height: 70px;
     }
     .admissionwrap .formwrap .formfields form .form-group label {font-size: 12px;}
+    .trustedcol {
+        width: 33.33%;
+    }
+    .trustedcol .image {
+        width: 100%;
+        padding: 0px 0;
+    }
 }
