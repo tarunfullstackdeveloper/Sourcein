@@ -93,7 +93,7 @@ ul  {
 h6.small {
     font-size: 0.875rem;
     color: #000000;
-    font-weight: 400;
+    font-weight: normal;
     font-family: 'Archivo';
     margin-bottom: 2rem;
     padding-left: 2rem;
@@ -111,13 +111,13 @@ h6.small:before {
 h2 {
     color: #1D2D3A;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 1.2rem;
 }
 p {
     color: #1D2D3A;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.4;
     font-family: "Be Vietnam Pro", serif;
     margin-bottom: 1.2rem;
@@ -135,7 +135,7 @@ p {
     justify-content: end;
 }
 .navbar-nav li a {
-    color: #0F3254;font-size: 1rem;font-weight: 400;text-decoration: none;padding: 0 1.25rem;display: inline-block;
+    color: #0F3254;font-size: 1rem;font-weight: normal;text-decoration: none;padding: 0 1.25rem;display: inline-block;
 }
 .bannerimg {
     position: absolute;
@@ -162,7 +162,7 @@ p {
 }
 .bannerslider h1 {
     font-size: 3.75rem;
-    font-weight: 900;
+    font-weight: bold;
     color: #fff;
     line-height: 1.2;
 }
@@ -194,6 +194,7 @@ p {
     margin-bottom: 0.625rem;
     display: block !important;
     font-family: "Be Vietnam Pro", serif;
+    font-weight: 600;
 }
 .admissionwrap .formwrap .formfields form .form-group input, .admissionwrap .formwrap .formfields form .form-group select {
     background: #FFFFFF;
@@ -215,6 +216,7 @@ p {
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+    font-weight: bold;
 }
 ul.navbar-nav {
     align-items: center;
@@ -286,7 +288,7 @@ ul.navbar-nav .nav-item:last-child {
 .sucessstorieslideinnr .content h2 {
     font-size: 1.5rem;
     list-style: 1.2;
-    color: #1D2D3A;font-weight: 400;
+    color: #1D2D3A;font-weight: normal;
 }
 .trustedbusiness .headingBox h2 {
     color: #0F3254;font-weight: 600;
