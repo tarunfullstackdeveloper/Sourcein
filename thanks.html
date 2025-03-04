@@ -17,8 +17,18 @@
 		<div class="container" style="height: 100%;">
 			<div class="row align-center" style="height: 100%;justify-content: center;">
 			   <div class="thanks textCenter" style="text-align: center;">
-				   <img src="img/thanks.png" alt="Thanks" width="" style="text-align: center; margin: 0 auto 0px;">
-				  
+				   <img src="img/thankyouimg.png" alt="Thanks" width="" style="text-align: center; margin: 0 auto 0px;">
+				  	<div class="videowrap">
+						<div class="playicon" style="cursor: pointer; z-index: 2;">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="31.99" r="32" fill="#22C55E"/>
+                                <path d="M40.5 31.12L26.5 23.04C26.348 22.9522 26.1755 22.906 26 22.906C25.8245 22.906 25.652 22.9522 25.5 23.04C25.3474 23.1281 25.2208 23.2549 25.133 23.4077C25.0452 23.5605 24.9993 23.7338 25 23.91V40.07C24.9993 40.2462 25.0452 40.4195 25.133 40.5722C25.2208 40.725 25.3474 40.8519 25.5 40.94C25.652 41.0278 25.8245 41.074 26 41.074C26.1755 41.074 26.348 41.0278 26.5 40.94L40.5 32.86C40.6539 32.7728 40.7819 32.6463 40.871 32.4934C40.96 32.3406 41.007 32.1669 41.007 31.99C41.007 31.8131 40.96 31.6394 40.871 31.4865C40.7819 31.3337 40.6539 31.2072 40.5 31.12ZM27 38.34V25.64L38 31.99L27 38.34Z" fill="white"/>
+                            </svg>
+                        </div>
+						<video id="video" playsinline="playsinline" muted loop="loop" preload="metadata" poster="img/videoposter.jpg">
+							<source src="" type="video/mp4">
+						</video>
+					</div>
 				   <a class="theme-btn" href="/" style="text-align: center; text-decoration: none;margin: 0 auto; max-width: 220px !important;border-radius: 10px;">Go back to the main page</a>
 			   </div>
 			</div>
@@ -28,28 +38,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+        $(document).ready(function() {
+            $(".playicon").on("click", function() {
+                let video = $(this).siblings("video")[0];
+                if (video) {
+                    $(this).fadeOut(); // Hide play icon
+                    video.play(); // Play video
+                    $(video).attr("controls", true); // Show controls
+                }
+            });
+        });
+
+	</script>
 </body>
 </html>
-<script type="text/javascript">
-
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbwDnu9cTJD8hihiIth4bDBqdYZ9exsUiQo1gPh30iyRUPkLgODLoyAWCCj0JxbKE26byg/exec'
-
-	const form = document.forms['contact-form']
-
-	form.addEventListener('submit', e => {
-	  e.preventDefault()
-	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-	  .then(response => {
-		// Check if the response is successful
-		if (response.ok) {
-		  // If successful, navigate to the thanks page
-		  window.location.href = 'thanks.html';
-		} else {
-		  // Handle other response scenarios if needed
-		  console.error('Error:', response.statusText);
-		}
-	  })
-	  // .then(() => { window.location.reload(); })
-	  .catch(error => console.error('Error!', error.message))
-	})
-</script>
