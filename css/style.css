@@ -442,6 +442,141 @@ img {
 /* .trustedcol .image img {
     filter: grayscale(1);
 } */
+.dotsmap .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #2C1F89;
+    display: inline-block;
+    z-index: 2;
+    border-radius: 6px;
+    margin-left: 10px;position: relative;
+}
+.dotsmap .dot:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -12px;
+    width: 14px;
+    height: 14px;
+    background-color: #2C1F89;
+    display: inline-block;
+    border-radius: 16px;
+    margin-left: 10px;
+    animation: pulse 1.5s infinite;
+}
+.locationhover {
+    margin-top: 10px;
+}
+.locationhover p{
+    display: flex;
+    align-items: center;
+}
+.dotsmap li:nth-child(1) {
+    position: relative;
+    top: 80px;
+    left: 130px;
+    z-index: 1;
+}
+.dotsmap li, .dotsmap li .linnr {
+    width: auto;display: inline-block;
+}
+.officelocation {
+    height: 580px;
+}
+.dotsmap li:nth-child(4) .dot {
+    top: 40px;
+    position: relative;
+}
+.dotsmap li:nth-child(4) {
+    position: absolute;
+    top: 180px;
+    left: 0;
+}
+.dotsmap li:nth-child(5) {
+    position: absolute;
+    top: 240px;
+    right: 40px;
+}
+.dotsmap li:nth-child(5) .dot {
+    top: 40px;
+    position: relative;
+}
+.dotsmap li:nth-child(3) {
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    left: -10px;
+    right: 0;
+}
+.dotsmap li:nth-child(2) {
+    text-align: center;
+    position: absolute;
+    top: 56px;
+    left: 190px;
+    right: 0;
+}
+.dotsmap li p svg {
+    margin-right: 10px;
+}
+.dotsmap li p {
+    justify-content: left;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+.ttlocation h6 {
+    color: #3C3C3C;
+    font-size: 16px;
+    line-height: 1.4;width: 100%
+}
+.ttlocation {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+.officelocation {
+    position: relative;
+    max-width: 1216px;
+    margin: 0 auto;
+}
+.dotsmap li:nth-child(6) {
+    position: absolute;
+    bottom: 100px;
+    right: 120px;
+}
+.officelocation ul.dotsmap:after {
+    content: "";
+    position: absolute;
+    top: 220px;
+    background: url(../img/linecurve.png);
+    width: 714px;
+    height: 58px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 265px;
+    transform: rotate(6deg);
+}
+.dotsmap li:nth-child(7) {
+    position: absolute;
+    bottom: 40px;
+    right: -30px;
+}
 @media(max-width: 1380px) {
     html {
         font-size: 80%;
@@ -450,6 +585,18 @@ img {
 @media(max-width: 1025px) {
     html {
         font-size: 70%;
+    }
+    .officelocation ul.dotsmap:after {
+        content: "";
+        position: absolute;
+        top: 214px;
+        background: url(../img/linecurve.png);
+        width: 515px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 251px;
+        transform: rotate(7deg);
     }
 }
 
@@ -557,6 +704,21 @@ img {
     .trustedcol {
         width: 120px;
     }
+    .officelocation ul.dotsmap:after {
+        content: "";
+        position: absolute;
+        top: 243px;
+        background: url(../img/linecurve.png);
+        width: 200px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 242px;
+        transform: rotate(15deg);
+    }
+    .officelocation {
+        background-size: 120% !important;
+    }
 }
 
 @media(max-width: 600px) {
@@ -659,5 +821,103 @@ img {
     .trustedcol .image {
         width: 100%;
         padding: 0px 0;
+    }
+    .locationhover {
+        display: none;
+    }
+    .dotsmap li:nth-child(4) .dot, .dotsmap li:nth-child(5) .dot {
+        top: 0;
+    }
+    .ttlocation h6 {
+        font-size: 10px;
+    }
+    .dotsmap .dot {
+        width: 6px;
+        height: 6px;
+    }
+    .dotsmap .dot:after {
+        width: 8px;
+        height: 8px;
+        top: -0.5px;
+        left: -10.5px;
+    }
+    .ttlocation {
+        padding: 6px 10px;
+        border-radius: 8px
+    }
+    .officelocation {
+        height: 260px;
+    }
+    .dotsmap li:nth-child(1) {
+        top: 60px;
+        left: 0px;
+    }
+    .dotsmap li:nth-child(2) {
+        top: 32px;
+        left: 80px;
+    }
+    .dotsmap li:nth-child(3) {
+        top: 60px;
+        left: 10px;
+    }
+    .dotsmap li:nth-child(4) {
+        top: 100px;
+    }
+    .dotsmap li:nth-child(6) {
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+    }
+    .dotsmap li:nth-child(7) {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+    }
+    .dotsmap li:nth-child(5) {
+        position: absolute;
+        top: 109px;
+        right: 30px;
+    }
+    .officelocation ul.dotsmap:after {
+        content: "";
+        position: absolute;
+        top: 86px;
+        background: url(../img/linecurve.png);
+        width: 275px;
+        height: 43px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+}
+@media(max-width: 424px) {
+    
+    .officelocation ul.dotsmap:after {
+        top: 88px;
+        width: 205px;
+        height: 53px;
+        left: 52px;
+        transform: rotate(-2deg);
+    }
+}
+@media(max-width: 415px) {
+    .officelocation ul.dotsmap:after {
+        top: 88px;
+        width: 235px;
+        height: 62px;
+        left: 52px;
+    }
+}
+@media(max-width: 392px) {
+    .officelocation ul.dotsmap:after {
+        width: 210px;
+        height: 55px;
+    }
+}
+@media (max-width: 376px) {
+    .officelocation ul.dotsmap:after {
+        width: 190px;
+        height: 50px;
     }
 }
