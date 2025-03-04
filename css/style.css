@@ -169,7 +169,8 @@ p {
 .videowrap .playicon {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 0;
+    right: 0;
 }
 .videowrap {
     margin: 30px 0;
