@@ -96,16 +96,16 @@ h6.small {
     font-weight: normal;
     font-family: 'Archivo';
     margin-bottom: 2rem;
-    padding-left: 2rem;
+    padding-left: 2.6rem;
     position: relative;
 }
 h6.small:before {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 6px;
     left: 0;
     width: 19px;
-    height: 4px;
+    height: 2px;
     background: #2C1F89;
 }
 h2 {
@@ -910,6 +910,45 @@ img {
         background-size: cover;
         left: 60px;
         transform: rotate(0deg);
+    }
+    h6.small {
+        padding-left: 0;
+    }
+    h6.small:before {
+        display: none;
+    }
+    .ourofficesec  .col-half {
+        padding: 10px 6px;
+        margin-bottom: 60px;
+    }
+    
+    .ourofficesec .col-half .mobinnr {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        padding: 10px 14px;
+        border-radius: 9px;
+        height: 100%;
+    }
+    
+    .ourofficesec .col-half .mobinnr p {
+        display: flex;
+        align-items: center;
+        font-size: 10px !important;
+        position: relative;
+        padding-left: 25px;
+    }
+    .ourofficesec .col-half .mobinnr h4 {
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .ourofficesec .col-half .mobinnr p svg {
+        left: 0;
+        width: 20px;        
+        height: 20px;
+        position: absolute;
+        top: 0;
+    }
+    .ourofficesec .col-half .mobinnr p br {
+        display: none;
     }
 }
 @media(max-width: 424px) {
